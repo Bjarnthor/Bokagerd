@@ -1,0 +1,31 @@
+<div class="container-fluid" ng-init = "init('harmonikkuleikhus')">
+
+	<div class="slider">
+		<video 
+			id = "{{video.tag}}"
+			width="100%" 
+			height="auto" 
+			ng-repeat="video in currentVideo" 
+			class="slide col-lg-12" 
+			ng-src="{{video.image}}" 
+			ng-hide="!isCurrentSlideIndex($index)"
+			type="video/mp4"
+			controls
+			loop
+			>   
+	</div>
+	<div class = "videoSelectorSpacer">
+		<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 videoText" ng-bind="currentText">
+			{{scope.currentText}}
+		</div>
+		<div class="videoSelectorAdjuster">
+			<div 	
+				id="selector{{$index}}" 
+				ng-repeat="video in currentVideo" ng-click="changeVideo($index)" 
+				ng-class="{selected: $index  == selected}" 
+				class="col-lg-1 col-md-1 col-sm-1 col-xs-1 videoSelector">
+				{{video.tag}}
+			</div>
+		</div>
+	</div>
+</div>

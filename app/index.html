@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/books.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="testApp">
+  <!--[if lte IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <div class ="wrapper">
+    <div id="sidebar-wrapper">
+      <div class="siteHeader" >
+       <a href="#/"><img class="img img-responsive siteHeader" src="images\logo.png"></a>
+      </div>
+      <div class="navLinkGroup">
+        <div class="navItem">
+          <a href="#/about/" class="navHeader">Um kennsluleiðbeiningarnar</a>
+        </div>
+        <div class ="navItem">
+          <a href="" class="navHeader" data-toggle="collapse" data-target="#link1" > Fyrir kennara</a>
+        
+          <div id="link1" class ="collapse"> 
+            <ul class ="navList">
+              <li><a href="#/skopuniskolastarfi/" class="navHeader">Sköpun í skólastarfi</a></li>
+              <li><a href="#/gagnlegirpunktar/" class="navHeader">Góð ráð fyrir kennslu í bókagerð</a></li>
+              <li><a href="#/slodirogheimildir/" class="navHeader">Slóðir og heimildir</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navItem">
+          <a href="" class="navHeader" data-toggle="collapse" data-target="#link2">Hagnýt atriði um bókagerð</a>
+           <div id="link2" class ="collapse"> 
+            <ul class ="navList">
+              <li><a href="#/hverskynsbaekur/" class="navHeader">Hvers kyns bækur</a></li>
+              <li><a href="#/honnunogutlit/" class="navHeader">Hönnun og útlit</a></li>
+              <li><a href="#/efnividurogumgengni/" class="navHeader">Efniviður og umgengni</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navItem">
+          <a href="#/pdf/" class="navHeader">Leiðbeiningar PDF</a>
+        </div>
+      </div>
+    </div>
+    
+     <div class="page-content-wrapper">
+        <div ng-view=""></div>
+     </div>
+  </div> 
+      
+
+         
+
+          
+
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <!--<script>
+    !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+    (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+    r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+  }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+  </script>
+-->
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/about.js"></script>
+  <script src="scripts/controllers/sidebar.js"></script>
+  <script src="scripts/controllers/book1controller.js"></script>
+  <script src="scripts/controllers/pdfcontroller.js"></script>
+  <script src="scripts/services/bookservice.js"></script>
+   <script src="scripts/services/pdfservice.js"></script>
+  <script src="scripts/directives/video-slider-custom.js"></script>
+  <!-- endbuild -->
+  </body>
+</html>
